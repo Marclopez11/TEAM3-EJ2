@@ -2,16 +2,16 @@ package ej2;
 
 public interface Entregable {
 	
-//Método entregar. Cambia el atributo prestado a true. 
+//Mï¿½todo entregar. Cambia el atributo prestado a true. 
 public void entregar();
 
-//Método devolver. Cambia el atributo prestado a false.
+//Mï¿½todo devolver. Cambia el atributo prestado a false.
 public void devolver();
 
 //Devuelve el estado del atributo prestado.
 public boolean isEntregado();
 
-//Compara las horas estimadas en los videojuegos y en las series el número de temporadas
+//Compara las horas estimadas en los videojuegos y en las series el nï¿½mero de temporadas
 public void compareTo(Object a);
 
 }

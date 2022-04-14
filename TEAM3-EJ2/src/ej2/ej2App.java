@@ -1,7 +1,5 @@
 package ej2;
 
-import ud08.Password;
-
 public class ej2App {
 
 	public static void main(String[] args) {
@@ -52,38 +50,72 @@ public class ej2App {
 		}
 
 		// Entregar algunos juegos con el m�todo entregar()
-		
 
 		System.out.println("                                 ");
 		System.out.println("----- Entregar Juegos -----");
 		System.out.println("                                 ");
 
-		System.out.println(arrayVideojuegos[0].entregar(true));
-		System.out.println(arrayVideojuegos[4].entregar(true));
+		// Decir que objeto nos han devuelto
+		arrayVideojuegos[0].entregar();
+		arrayVideojuegos[4].entregar();
 
-		
-		
-		// Entregar algunas series con el m�todo entregar()
-		
-		
-		System.out.println("                                 ");
-		System.out.println("----- Entregar Series -----");
-		System.out.println("                                 ");
+		// Mostrar objeto devuelto
 
-		System.out.println(arraySeries[2].entregar(true));
-		System.out.println(arraySeries[1].entregar(true));
+		System.out.println(arrayVideojuegos[0]);
+		System.out.println(arrayVideojuegos[4]);
 
-		// Contar cu�ntas series hay entregadas. Al contarlas, devolverlas
+		// Entregar algunas devolver con el m�todo devolver()
 
 		System.out.println("                                 ");
-		System.out.println("----- Series Entregados -----");
+		System.out.println("----- Devolver Series -----");
 		System.out.println("                                 ");
 
-		//Contar cu�ntos juegos hay entregados. Al contarlos, devolverlos
+		// Decir que objeto nos han devuelto
+
+		arraySeries[2].devolver();
+		arraySeries[1].devolver();
+		arraySeries[4].entregar();
+
+
+		// Mostrar objeto devuelto
+		System.out.println(arraySeries[2]);
+		System.out.println(arraySeries[1]);
+
+		// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
 
 		System.out.println("                                 ");
 		System.out.println("----- Juegos Entregados -----");
 		System.out.println("                                 ");
 
+		for (int i = 0; i < arrayVideojuegos.length; i++) {
+
+			if (arrayVideojuegos[i].isEntregado() == true) {
+				System.out.println(arrayVideojuegos[i]);
+			}
+
+		}
+
+		// Contar cuantas serieshay entregadas. Al contarlos, devolverlos
+
+		System.out.println("                                 ");
+		System.out.println("----- Series Entregados -----");
+		System.out.println("                                 ");
+
+		for (int i = 0; i < arraySeries.length; i++) {
+
+			if (arraySeries[i].isEntregado() == true) {
+				System.out.println(arraySeries[i]);
+			}
+
+		}
+		
+		//Indicar que videojuego tiene mas horas estimadas
+		
+		
+		
+		//Indica la serie con mas temporadas
+
+		
+		
 	}
 }

@@ -74,9 +74,10 @@ public class Serie implements Entregable{
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
 
+	
 	@Override
 	public void entregar() {
-		// TODO entregar
+		
 		this.entregado = true;
 		
 	}

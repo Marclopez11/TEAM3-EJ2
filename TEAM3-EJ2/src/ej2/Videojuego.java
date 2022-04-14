@@ -59,6 +59,7 @@ public class Videojuego implements Entregable {
 		this.genero = genero;
 	}
 
+	
 	public String getcompania() {
 		return compania;
 	}
@@ -73,6 +74,7 @@ public class Videojuego implements Entregable {
 				+ ", genero=" + genero + ", compania=" + compania + "]";
 	}
 
+	
 	@Override
 	public void entregar() {
 		
@@ -88,9 +90,8 @@ public class Videojuego implements Entregable {
 	}
 
 	@Override
-	public Boolean isEntregado() {
+	public boolean isEntregado() {
 		// TODO Auto-generated method stub
-		this.entregado = entregado;
 		
 		return this.entregado;
 		
