@@ -80,6 +80,8 @@ public class ej2App {
 		// Mostrar objeto devuelto
 		System.out.println(arraySeries[2]);
 		System.out.println(arraySeries[1]);
+		
+		//TODO Entregar Juegos
 
 		// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
 
@@ -110,8 +112,10 @@ public class ej2App {
 		}
 		
 		//Indicar que videojuego tiene mas horas estimadas
+		//variable horas 0
 		
-		
+		//for
+			//arraySeries[1].getHoras
 		
 		//Indica la serie con mas temporadas
 
