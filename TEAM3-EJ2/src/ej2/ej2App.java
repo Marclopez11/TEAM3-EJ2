@@ -15,5 +15,21 @@ public class ej2App {
     //Creamos un objeto en cada posición de arraySeries
     arraySeries[0]=new Serie("Pose", 1, "drama", "FX Productions");
 	
+  
+    
+    //Entregar algunos juegos con el método entregar()
+    
+    
+    //Entregar algunas series con el método entregar()
+    
+    
+    //Contar cuántos juegos hay entregados. Al contarlos, devolverlos
+    
+    
+    //Contar cuántas series hay entregadas. Al contarlas, devolverlas
+    
+    
+    
+    
 	}
 }
