@@ -81,7 +81,9 @@ public class ej2App {
 		System.out.println(arraySeries[2]);
 		System.out.println(arraySeries[1]);
 		
-		//TODO Entregar Juegos
+		//TODO Entregar series
+		
+		//TODO devolver juegos
 
 		// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
 
@@ -100,7 +102,7 @@ public class ej2App {
 		// Contar cuantas serieshay entregadas. Al contarlos, devolverlos
 
 		System.out.println("                                 ");
-		System.out.println("----- Series Entregados -----");
+		System.out.println("----- Series Entregadas -----");
 		System.out.println("                                 ");
 
 		for (int i = 0; i < arraySeries.length; i++) {
