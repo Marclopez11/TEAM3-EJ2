@@ -1,6 +1,6 @@
 package ej2;
 
-public class Videojuego {
+public class Videojuego implements Entregable {
 
 	private String titulo;
 	private int horasEstimadas;
@@ -27,6 +27,7 @@ public class Videojuego {
 	}
 
 	public Videojuego(String titulo, int horasEstimadas, String genero, String compania) {
+		super();
 		this.titulo = titulo;
 		this.horasEstimadas = horasEstimadas;
 		this.entregado = false;
@@ -58,19 +59,62 @@ public class Videojuego {
 		this.genero = genero;
 	}
 
-	public String getCompania() {
+	public String getcompania() {
 		return compania;
 	}
 
-	public void setCompania(String compania) {
+	public void setcompania(String compania) {
 		this.compania = compania;
 	}
 
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
-				+ ", genero=" + genero + ", compañia=" + compania + "]";
+				+ ", genero=" + genero + ", compania=" + compania + "]";
 	}
+
+	@Override
+	public void entregar() {
+		
+		this.entregado = true;
+		
+	}
+
+	@Override
+	public void devolver() {
+		// TODO Auto-generated method stub
+		this.entregado = false;
+		
+	}
+
+	@Override
+	public Boolean isEntregado() {
+		// TODO Auto-generated method stub
+		this.entregado = entregado;
+		
+		return this.entregado;
+		
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		int aInt = (int) a;
+
+        if(this.horasEstimadas < aInt) {
+            System.out.println("Tiene menos temporadas.");
+        }else if (this.horasEstimadas > aInt) {
+            System.out.println("Tiene mas temporadas.");
+        }else {
+            System.out.println("Tiene las mismas temporadas");
+        }
+		
+	}
+
+	
+
+	
+	
+	
 	
 	
 	
