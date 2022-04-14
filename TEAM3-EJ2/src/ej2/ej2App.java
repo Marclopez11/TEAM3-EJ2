@@ -23,7 +23,7 @@ public class ej2App {
 		arraySeries[1] = new Serie("Eternals", 4, "aventura", "FX Productions");
 		arraySeries[2] = new Serie("Red", 2, "miedo", "FX Productions");
 		arraySeries[3] = new Serie("Amor ocasional", 2, "comedia", "FX Productions");
-		arraySeries[4] = new Serie("Mystère", 3, "misterio", "FX Productions");
+		arraySeries[4] = new Serie("Mystery", 3, "misterio", "FX Productions");
 
 		// moostrar todas las series
 
@@ -40,7 +40,7 @@ public class ej2App {
 		// moostrar todas los videojuegos
 
 		System.out.println("                                 ");
-		System.out.println("----- Las Mejores Videojuegos 2021 -----");
+		System.out.println("----- Los Mejores Videojuegos 2021 -----");
 		System.out.println("                                 ");
 
 		for (int i = 0; i < arrayVideojuegos.length; i++) {
@@ -64,6 +64,17 @@ public class ej2App {
 		System.out.println(arrayVideojuegos[0]);
 		System.out.println(arrayVideojuegos[4]);
 
+		//Done devolver juegos
+		System.out.println("                                 ");
+		System.out.println("----- Devolver Juegos -----");
+		System.out.println("                                 ");
+
+		arrayVideojuegos[2].devolver();
+		arrayVideojuegos[1].devolver();
+
+		System.out.println(arrayVideojuegos[2]);
+		System.out.println(arrayVideojuegos[1]);
+
 		// Entregar algunas devolver con el m�todo devolver()
 
 		System.out.println("                                 ");
@@ -74,16 +85,23 @@ public class ej2App {
 
 		arraySeries[2].devolver();
 		arraySeries[1].devolver();
-		arraySeries[4].entregar();
+
 
 
 		// Mostrar objeto devuelto
 		System.out.println(arraySeries[2]);
 		System.out.println(arraySeries[1]);
-		
-		//TODO Entregar series
-		
-		//TODO devolver juegos
+
+		//DONE Entregar series
+		System.out.println("                                 ");
+		System.out.println("----- Entregar Series -----");
+		System.out.println("                                 ");
+
+		arraySeries[4].entregar();
+		arraySeries[0].entregar();
+
+		System.out.println(arraySeries[4]);
+		System.out.println(arraySeries[0]);
 
 		// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
 
@@ -113,15 +131,48 @@ public class ej2App {
 
 		}
 		
-		//Indicar que videojuego tiene mas horas estimadas
-		//variable horas 0
+		System.out.println("                                 ");
+		System.out.println("----- Juego con mas horas: -----");
+		System.out.println("                                 ");
+		compararHorasVideojuego(arrayVideojuegos);
 		
-		//for
-			//arraySeries[1].getHoras
-		
-		//Indica la serie con mas temporadas
+		System.out.println("                                 ");
+		System.out.println("----- Serie con mas temporadas: -----");
+		System.out.println("                                 ");
+		comprarHorasTemporadas(arraySeries);
 
-		
-		
 	}
+
+	//metodo comparar con array de objetos como parametro
+	public static void compararHorasVideojuego(Videojuego[] v) {
+
+		int num = 0;
+		int id = 0;
+
+		for (int i = 0; i < v.length; i++)
+			if(v[i].getHorasEstimadas() > num){
+				num = v[i].getHorasEstimadas();
+				id = i;
+			}
+		
+		System.out.println("El juego con mas horas es " + v[id].getTitulo() + " con " + v[id].getHorasEstimadas() + " horas estimadas.");
+
+	}
+	
+	//metodo comparar con array de objetos como parametro
+	public static void comprarHorasTemporadas(Serie[] s) {
+
+		int num = 0;
+		int id = 0;
+
+		for (int i = 0; i < s.length; i++)
+			if(s[i].getNumeroTemporada() > num){
+				num = s[i].getNumeroTemporada();
+				id = i;
+			}
+		
+		System.out.println("El juego con mas horas es " + s[id].getTitulo() + " con " + s[id].getNumeroTemporada() + " horas estimadas.");
+
+	}
+
 }
