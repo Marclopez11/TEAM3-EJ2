@@ -73,6 +73,45 @@ public class Videojuego implements Entregable {
 				+ ", genero=" + genero + ", compania=" + compania + "]";
 	}
 
+	@Override
+	public void entregar() {
+		
+		this.entregado = true;
+		
+	}
+
+	@Override
+	public void devolver() {
+		// TODO Auto-generated method stub
+		this.entregado = false;
+		
+	}
+
+	@Override
+	public Boolean isEntregado() {
+		// TODO Auto-generated method stub
+		this.entregado = entregado;
+		
+		return this.entregado;
+		
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		int aInt = (int) a;
+
+        if(this.horasEstimadas < aInt) {
+            System.out.println("Tiene menos temporadas.");
+        }else if (this.horasEstimadas > aInt) {
+            System.out.println("Tiene mas temporadas.");
+        }else {
+            System.out.println("Tiene las mismas temporadas");
+        }
+		
+	}
+
+	
+
 	
 	
 	
