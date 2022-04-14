@@ -1,6 +1,6 @@
 package ej2;
 
-public class Serie {
+public class Serie implements Entregable{
 	
 	//titulo numero de teporadas entregado genero creador
 	
