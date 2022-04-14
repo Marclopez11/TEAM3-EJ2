@@ -11,7 +11,7 @@ public void devolver();
 //Devuelve el estado del atributo prestado.
 public boolean isEntregado();
 
-//Compara las horas estimadas en los videojuegos y en las series el n�mero de temporadas
+//Compara las horas estimadas en los videojuegos y en las series el n�mero de temporadas d
 public void compareTo(Object a);
 
 }

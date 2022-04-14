@@ -91,7 +91,7 @@ public class Videojuego implements Entregable {
 
 	@Override
 	public boolean isEntregado() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stubd
 		
 		return this.entregado;
 		

@@ -2,7 +2,7 @@ package ej2;
 
 public class Serie implements Entregable{
 	
-	//titulo numero de teporadas entregado genero creador
+	//titulo numero de teporadas entregado genero creador d
 	
 	protected String titulo;
 	protected int numeroTemporada;

@@ -9,7 +9,7 @@ public class ej2App {
 		// Creamos un array de objetos de la clase Serie
 		Serie arraySeries[] = new Serie[5];
 
-		// Creamos objetos en cada posicion de arrayVideojuegos
+		// Creamos objetos en cada posicion de arrayVideojuegos d
 
 		arrayVideojuegos[0] = new Videojuego("Tomb Raider: Legend", 19, "Aventura", "Humansoft");
 		arrayVideojuegos[1] = new Videojuego("Elden Ring ", 98, "accion", "Humansoft");
