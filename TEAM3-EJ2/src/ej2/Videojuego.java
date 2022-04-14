@@ -1,6 +1,6 @@
 package ej2;
 
-public class Videojuego {
+public class Videojuego implements Entregable {
 
 	private String titulo;
 	private int horasEstimadas;
