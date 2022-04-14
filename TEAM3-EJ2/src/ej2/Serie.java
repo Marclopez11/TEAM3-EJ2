@@ -73,6 +73,40 @@ public class Serie implements Entregable{
 		return "Serie [titulo=" + titulo + ", numeroTemporada=" + numeroTemporada + ", entregado=" + entregado
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
+
+	@Override
+	public void entregar() {
+		// TODO entregar
+		this.entregado = true;
+		
+	}
+
+	@Override
+	public void devolver() {
+		// TODO Auto-generated method stub
+		this.entregado = false;
+	}
+
+	@Override
+	public boolean isEntregado() {
+		// TODO Auto-generated method stub
+		return this.entregado;
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		// TODO Auto-generated method stub
+		int aInt = (int) a;
+		
+		if(this.numeroTemporada < aInt) {
+			System.out.println("Tiene menos temporadas.");
+		}else if (this.numeroTemporada > aInt) {
+			System.out.println("Tiene mas temporadas.");
+		}else {
+			System.out.println("Tiene las mismas temporadas");
+		}
+		
+	}
 	
 	
 
