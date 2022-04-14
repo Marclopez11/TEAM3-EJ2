@@ -1,4 +1,4 @@
-package EJ2App;
+package ej2;
 
 public interface Entregable {
 	
