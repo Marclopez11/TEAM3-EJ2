@@ -1,11 +1,7 @@
 package EJ2App;
 
-public class Entregable {
+public interface Entregable {
 
-	public Entregable() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	
+
 
 }
