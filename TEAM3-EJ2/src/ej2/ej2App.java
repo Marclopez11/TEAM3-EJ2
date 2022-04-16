@@ -1,13 +1,406 @@
 package ej2;
 
+import java.util.Scanner;
+
+/*
+ * Marc Lopez
+ * Java 1.8
+ * 
+ * */
 public class ej2App {
+
+	static Scanner sc = new Scanner(System.in);
+
+	// Creamos un array de objetos de la clase VideoJuego
+	static Videojuego arrayVideojuegos[] = new Videojuego[5];
+	// Creamos un array de objetos de la clase Serie
+	static Serie arraySeries[] = new Serie[5];
 
 	public static void main(String[] args) {
 
-		// Creamos un array de objetos de la clase VideoJuego
-		Videojuego arrayVideojuegos[] = new Videojuego[5];
-		// Creamos un array de objetos de la clase Serie
-		Serie arraySeries[] = new Serie[5];
+		rellenarArrays();
+
+		System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+		System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+		System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+
+
+		int proces = sc.nextInt();
+
+		while (proces != 0) {
+
+			switch (proces) {
+			case 1:
+				mostrarSeries(arraySeries);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+
+				break;
+			case 2:
+				mostrarVideojuegos(arrayVideojuegos);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				
+				break;
+
+			case 3:
+				entregarJuegos(arrayVideojuegos);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+				
+			case 4:
+				entregarSeries(arraySeries);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+				
+			case 5:
+				devolverJuegos(arrayVideojuegos);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+				
+			case 6:
+				devolverSeries(arraySeries);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+				
+			case 7:
+				juegosEntregados(arrayVideojuegos);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+			case 8:
+				seriesEntregados(arraySeries);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+
+				proces = sc.nextInt();
+				break;
+			case 9:
+				comprarHorasTemporadas(arraySeries);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+			case 10:
+				compararHorasVideojuego(arrayVideojuegos);
+				System.out.println("");
+				System.out.println("");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+				break;
+
+			default:
+				System.out.println("");
+				System.out.println("");
+				System.out.println("Introducir una de las opciones");
+				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+				System.out.println("");
+				System.out.println("");
+				proces = sc.nextInt();
+
+				break;
+			}
+
+		}
+		sc.close();
+
+	
+
+	}
+
+	// metodo comparar con array de objetos como parametro
+	public static void compararHorasVideojuego(Videojuego[] v) {
+		
+		
+		System.out.println("                                 ");
+		System.out.println("----- Juego con mas horas: -----");
+		System.out.println("                                 ");
+
+
+		int num = 0;
+		int id = 0;
+
+		for (int i = 0; i < v.length; i++)
+			if (v[i].getHorasEstimadas() > num) {
+				num = v[i].getHorasEstimadas();
+				id = i;
+			}
+
+		System.out.println("El juego con mas horas es " + v[id].getTitulo() + " con " + v[id].getHorasEstimadas()
+				+ " horas estimadas.");
+
+	}
+
+	// metodo comparar con array de objetos como parametro
+	public static void comprarHorasTemporadas(Serie[] s) {
+		
+
+		System.out.println("                                 ");
+		System.out.println("----- Serie con mas temporadas: -----");
+		System.out.println("                                 ");
+		
+
+		int num = 0;
+		int id = 0;
+
+		for (int i = 0; i < s.length; i++)
+			if (s[i].getNumeroTemporada() > num) {
+				num = s[i].getNumeroTemporada();
+				id = i;
+			}
+
+		System.out.println("El juego con mas horas es " + s[id].getTitulo() + " con " + s[id].getNumeroTemporada()
+				+ " horas estimadas.");
+
+	}
+
+	// moostrar todas las series
+	public static void mostrarSeries(Serie[] s) {
+
+		System.out.println("                                 ");
+		System.out.println("----- Las Mejores Series 2021 -----");
+		System.out.println("                                 ");
+
+		for (int i = 0; i < s.length; i++) {
+
+			System.out.println(s[i]);
+
+		}
+
+	}
+
+	// moostrar todas los videojuegos
+	public static void mostrarVideojuegos(Videojuego[] v) {
+
+		System.out.println("                                 ");
+		System.out.println("----- Los Mejores Videojuegos 2021 -----");
+		System.out.println("                                 ");
+
+		for (int i = 0; i < v.length; i++) {
+
+			System.out.println(v[i]);
+
+		}
+
+	}
+
+	// Entregar algunos juegos con el m�todo entregar()
+	public static void entregarJuegos(Videojuego[] v) {
+
+		
+
+		mostrarVideojuegos(arrayVideojuegos);
+
+		System.out.println("                                 ");
+		System.out.println("----- Entregar Juegos -----");
+		System.out.println("                                 ");
+
+		System.out.println("Que juego quieres entregar");
+		int idjuego = sc.nextInt();
+
+		// Decir que objeto nos han devuelto
+		v[idjuego].entregar();
+
+		// Mostrar objeto devuelto
+
+		System.out.println(v[idjuego]);
+
+	}
+
+	public static void devolverJuegos(Videojuego[] v) {
+
+		
+		mostrarVideojuegos(arrayVideojuegos);
+
+		System.out.println("                                 ");
+		System.out.println("----- Devolver Juegos -----");
+		System.out.println("                                 ");
+
+		System.out.println("Que juego quieres devolver");
+		int idjuego = sc.nextInt();
+
+		// Decir que objeto nos han devuelto
+		v[idjuego].devolver();
+
+		// Mostrar objeto devuelto
+
+		System.out.println(v[idjuego]);
+
+	}
+	
+	
+	public static void devolverSeries(Serie[] s) {
+
+		
+		mostrarSeries(arraySeries);
+
+		System.out.println("                                 ");
+		System.out.println("----- Devolver Juegos -----");
+		System.out.println("                                 ");
+
+		System.out.println("Que serie quieres devolver");
+		int idjuego = sc.nextInt();
+
+		// Decir que objeto nos han devuelto
+		s[idjuego].devolver();
+
+		// Mostrar objeto devuelto
+
+		System.out.println(s[idjuego]);
+
+	}
+
+	// Entregar algunos juegos con el m�todo entregar()
+	public static void entregarSeries(Serie[] s) {
+
+		
+		mostrarSeries(arraySeries);
+
+		// DONE Entregar series
+		System.out.println("                                 ");
+		System.out.println("----- Entregar Series -----");
+		System.out.println("                                 ");
+
+		System.out.println("Que serie quieres entregar");
+		int idserie = sc.nextInt();
+
+		// Decir que objeto nos han devuelto
+		s[idserie].entregar();
+
+		// Mostrar objeto devuelto
+
+		System.out.println(s[idserie]);
+
+	}
+
+	// Entregar algunos juegos con el m�todo entregar()
+	public static void entregarVideojuegos(Videojuego[] v) {
+
+		
+
+		mostrarVideojuegos(arrayVideojuegos);
+
+		// DONE Entregar Videojueos
+		System.out.println("                                 ");
+		System.out.println("----- Entregar Videojuegos -----");
+		System.out.println("                                 ");
+
+		System.out.println("Que videojuego quieres entregar");
+		int idvideo = sc.nextInt();
+
+		// Decir que objeto nos han devuelto
+		v[idvideo].entregar();
+
+		// Mostrar objeto devuelto
+
+		System.out.println(v[idvideo]);
+
+	}
+
+	// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
+	public static void juegosEntregados(Videojuego[] v) {
+
+		System.out.println("                                 ");
+		System.out.println("----- Juegos Entregados -----");
+		System.out.println("                                 ");
+
+		for (int i = 0; i < v.length; i++) {
+
+			if (v[i].isEntregado() == true) {
+				System.out.println(v[i]);
+			}
+
+		}
+
+	}
+
+	// Contar cuantas serieshay entregadas. Al contarlos, devolverlos
+	public static void seriesEntregados(Serie[] s) {
+
+		System.out.println("                                 ");
+		System.out.println("----- Series Entregadas -----");
+		System.out.println("                                 ");
+
+		for (int i = 0; i < s.length; i++) {
+
+			if (s[i].isEntregado() == true) {
+				System.out.println(s[i]);
+			}
+
+		}
+
+	}
+	
+	
+
+
+
+
+
+	// Entregar algunos juegos con el m�todo entregar()
+	public static void rellenarArrays() {
 
 		// Creamos objetos en cada posicion de arrayVideojuegos d
 
@@ -24,154 +417,6 @@ public class ej2App {
 		arraySeries[2] = new Serie("Red", 2, "miedo", "FX Productions");
 		arraySeries[3] = new Serie("Amor ocasional", 2, "comedia", "FX Productions");
 		arraySeries[4] = new Serie("Mystery", 3, "misterio", "FX Productions");
-
-		// moostrar todas las series
-
-		System.out.println("                                 ");
-		System.out.println("----- Las Mejores Series 2021 -----");
-		System.out.println("                                 ");
-
-		for (int i = 0; i < arraySeries.length; i++) {
-
-			System.out.println(arraySeries[i]);
-
-		}
-
-		// moostrar todas los videojuegos
-
-		System.out.println("                                 ");
-		System.out.println("----- Los Mejores Videojuegos 2021 -----");
-		System.out.println("                                 ");
-
-		for (int i = 0; i < arrayVideojuegos.length; i++) {
-
-			System.out.println(arrayVideojuegos[i]);
-
-		}
-
-		// Entregar algunos juegos con el m�todo entregar()
-
-		System.out.println("                                 ");
-		System.out.println("----- Entregar Juegos -----");
-		System.out.println("                                 ");
-
-		// Decir que objeto nos han devuelto
-		arrayVideojuegos[0].entregar();
-		arrayVideojuegos[4].entregar();
-
-		// Mostrar objeto devuelto
-
-		System.out.println(arrayVideojuegos[0]);
-		System.out.println(arrayVideojuegos[4]);
-
-		//Done devolver juegos
-		System.out.println("                                 ");
-		System.out.println("----- Devolver Juegos -----");
-		System.out.println("                                 ");
-
-		arrayVideojuegos[2].devolver();
-		arrayVideojuegos[1].devolver();
-
-		System.out.println(arrayVideojuegos[2]);
-		System.out.println(arrayVideojuegos[1]);
-
-		// Entregar algunas devolver con el m�todo devolver()
-
-		System.out.println("                                 ");
-		System.out.println("----- Devolver Series -----");
-		System.out.println("                                 ");
-
-		// Decir que objeto nos han devuelto
-
-		arraySeries[2].devolver();
-		arraySeries[1].devolver();
-
-
-
-		// Mostrar objeto devuelto
-		System.out.println(arraySeries[2]);
-		System.out.println(arraySeries[1]);
-
-		//DONE Entregar series
-		System.out.println("                                 ");
-		System.out.println("----- Entregar Series -----");
-		System.out.println("                                 ");
-
-		arraySeries[4].entregar();
-		arraySeries[0].entregar();
-
-		System.out.println(arraySeries[4]);
-		System.out.println(arraySeries[0]);
-
-		// Contar los videojuegos hay entregadas. Al contarlas, devolverlas
-
-		System.out.println("                                 ");
-		System.out.println("----- Juegos Entregados -----");
-		System.out.println("                                 ");
-
-		for (int i = 0; i < arrayVideojuegos.length; i++) {
-
-			if (arrayVideojuegos[i].isEntregado() == true) {
-				System.out.println(arrayVideojuegos[i]);
-			}
-
-		}
-
-		// Contar cuantas serieshay entregadas. Al contarlos, devolverlos
-
-		System.out.println("                                 ");
-		System.out.println("----- Series Entregadas -----");
-		System.out.println("                                 ");
-
-		for (int i = 0; i < arraySeries.length; i++) {
-
-			if (arraySeries[i].isEntregado() == true) {
-				System.out.println(arraySeries[i]);
-			}
-
-		}
-		
-		System.out.println("                                 ");
-		System.out.println("----- Juego con mas horas: -----");
-		System.out.println("                                 ");
-		compararHorasVideojuego(arrayVideojuegos);
-		
-		System.out.println("                                 ");
-		System.out.println("----- Serie con mas temporadas: -----");
-		System.out.println("                                 ");
-		comprarHorasTemporadas(arraySeries);
-
-	}
-
-	//metodo comparar con array de objetos como parametro
-	public static void compararHorasVideojuego(Videojuego[] v) {
-
-		int num = 0;
-		int id = 0;
-
-		for (int i = 0; i < v.length; i++)
-			if(v[i].getHorasEstimadas() > num){
-				num = v[i].getHorasEstimadas();
-				id = i;
-			}
-		
-		System.out.println("El juego con mas horas es " + v[id].getTitulo() + " con " + v[id].getHorasEstimadas() + " horas estimadas.");
-
-	}
-	
-	//metodo comparar con array de objetos como parametro
-	public static void comprarHorasTemporadas(Serie[] s) {
-
-		int num = 0;
-		int id = 0;
-
-		for (int i = 0; i < s.length; i++)
-			if(s[i].getNumeroTemporada() > num){
-				num = s[i].getNumeroTemporada();
-				id = i;
-			}
-		
-		System.out.println("El juego con mas horas es " + s[id].getTitulo() + " con " + s[id].getNumeroTemporada() + " horas estimadas.");
 
 	}
 
