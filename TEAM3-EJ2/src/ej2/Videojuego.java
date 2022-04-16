@@ -1,5 +1,11 @@
 package ej2;
 
+/*
+ * Marc Lopez
+ * Java 1.8
+ * 
+ * */
+
 public class Videojuego implements Entregable {
 
 	private String titulo;
@@ -8,6 +14,7 @@ public class Videojuego implements Entregable {
 	private String genero;
 	private String compania;
 
+	//por defecto
 	public Videojuego() {
 		this.titulo = "";
 		this.horasEstimadas = 10;
@@ -17,6 +24,7 @@ public class Videojuego implements Entregable {
 
 	}
 
+	//con dos parametros titulo y horas
 	public Videojuego(String titulo, int horasEstimadas) {
 		this.titulo = titulo;
 		this.horasEstimadas = horasEstimadas;
@@ -26,6 +34,7 @@ public class Videojuego implements Entregable {
 
 	}
 
+	//con todos los parametros
 	public Videojuego(String titulo, int horasEstimadas, String genero, String compania) {
 		super();
 		this.titulo = titulo;

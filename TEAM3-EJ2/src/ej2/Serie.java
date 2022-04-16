@@ -1,5 +1,11 @@
 package ej2;
 
+/*
+ * Eloi Martorell
+ * Java 1.8
+ * 
+ * */
+
 public class Serie implements Entregable{
 	
 	//titulo numero de teporadas entregado genero creador d
@@ -19,6 +25,7 @@ public class Serie implements Entregable{
 		this.creador = "";
 	}
 	
+	//con titulo y creador como parametros
 	protected Serie(String titulo, String creador) {
 		this.titulo = titulo;
 		this.numeroTemporada = 3;

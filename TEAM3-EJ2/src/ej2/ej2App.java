@@ -3,12 +3,15 @@ package ej2;
 import java.util.Scanner;
 
 /*
+ * Eloi Martorell
  * Marc Lopez
+ * Ixabel
  * Java 1.8
  * 
  * */
 public class ej2App {
 
+	//static Scanner sc para invocarlo desde los metodos también
 	static Scanner sc = new Scanner(System.in);
 
 	// Creamos un array de objetos de la clase VideoJuego
@@ -17,156 +20,94 @@ public class ej2App {
 	static Serie arraySeries[] = new Serie[5];
 
 	public static void main(String[] args) {
-
+		
+		//metodo para rellenar algunos arrays
 		rellenarArrays();
 
-		System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-		System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-		System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+		//usamos el metodo para imprimir por pantalla el menú
+		imprimirPantalla();
 
 
 		int proces = sc.nextInt();
-
+		
+		//menu con sus diferentes opciones
 		while (proces != 0) {
 
 			switch (proces) {
 			case 1:
 				mostrarSeries(arraySeries);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 
 				break;
 			case 2:
 				mostrarVideojuegos(arrayVideojuegos);
 				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				
 				break;
 
 			case 3:
 				entregarJuegos(arrayVideojuegos);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 				
 			case 4:
 				entregarSeries(arraySeries);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 				
 			case 5:
 				devolverJuegos(arrayVideojuegos);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 				
 			case 6:
 				devolverSeries(arraySeries);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 				
 			case 7:
 				juegosEntregados(arrayVideojuegos);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 			case 8:
 				seriesEntregados(arraySeries);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 
 				proces = sc.nextInt();
 				break;
 			case 9:
 				comprarHorasTemporadas(arraySeries);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 			case 10:
 				compararHorasVideojuego(arrayVideojuegos);
-				System.out.println("");
-				System.out.println("");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				imprimirPantalla();
 				proces = sc.nextInt();
 				break;
 
 			default:
+				//comprobamos que se ha introducido el numero correcto
 				System.out.println("");
-				System.out.println("");
-				System.out.println("Introducir una de las opciones");
-				System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
-				System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
-				System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
-				System.out.println("");
-				System.out.println("");
+				System.out.println("Tienes que introducir una de las opciones:");
+				imprimirPantalla();
 				proces = sc.nextInt();
 
 				break;
 			}
 
 		}
+		
+		//cerramos teclado
 		sc.close();
-
-	
 
 	}
 
@@ -269,6 +210,7 @@ public class ej2App {
 
 	}
 
+	//metodo para devolver videojuegos
 	public static void devolverJuegos(Videojuego[] v) {
 
 		
@@ -290,7 +232,7 @@ public class ej2App {
 
 	}
 	
-	
+	//metodo para devolver series
 	public static void devolverSeries(Serie[] s) {
 
 		
@@ -393,11 +335,16 @@ public class ej2App {
 
 	}
 	
-	
-
-
-
-
+	//metodo para compactar el menu
+	public static void imprimirPantalla() {
+		System.out.println("");
+		System.out.println("");
+		System.out.println("1 - Todas las Series 2 - Todos los Videojuegos 3 - Entregar Videojuegos  4 - Entregar Series");
+		System.out.println("5 - Devolver Videojuegos  6 - Devolver Series 7 - Juegos Entregados  8 - Serie Entregados");
+		System.out.println("9 - Comparar Horas Series 10 - Comparar horas videojuegos 0 - Salir");
+		System.out.println("");
+		System.out.println("");
+	}
 
 	// Entregar algunos juegos con el mï¿½todo entregar()
 	public static void rellenarArrays() {

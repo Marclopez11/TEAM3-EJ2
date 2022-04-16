@@ -1,5 +1,11 @@
 package ej2;
 
+/*
+ * Ixabel
+ * Java 1.8
+ * 
+ * */
+
 public interface Entregable {
 	
 //M�todo entregar. Cambia el atributo prestado a true. 
