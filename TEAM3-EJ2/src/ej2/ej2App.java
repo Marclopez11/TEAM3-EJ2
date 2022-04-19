@@ -11,7 +11,7 @@ import java.util.Scanner;
  * */
 public class ej2App {
 
-	//static Scanner sc para invocarlo desde los metodos también
+	//static Scanner sc para invocarlo desde los metodos tambiï¿½n
 	static Scanner sc = new Scanner(System.in);
 
 	// Creamos un array de objetos de la clase VideoJuego
@@ -24,7 +24,7 @@ public class ej2App {
 		//metodo para rellenar algunos arrays
 		rellenarArrays();
 
-		//usamos el metodo para imprimir por pantalla el menú
+		//usamos el metodo para imprimir por pantalla el menï¿½
 		imprimirPantalla();
 
 
@@ -236,6 +236,8 @@ public class ej2App {
 	public static void devolverSeries(Serie[] s) {
 
 		
+		
+		
 		mostrarSeries(arraySeries);
 
 		System.out.println("                                 ");
@@ -243,14 +245,14 @@ public class ej2App {
 		System.out.println("                                 ");
 
 		System.out.println("Que serie quieres devolver");
-		int idjuego = sc.nextInt();
+		int idserie = sc.nextInt();
 
 		// Decir que objeto nos han devuelto
-		s[idjuego].devolver();
+		s[idserie].entregar();
 
 		// Mostrar objeto devuelto
 
-		System.out.println(s[idjuego]);
+		System.out.println(s[idserie]);
 
 	}
 
